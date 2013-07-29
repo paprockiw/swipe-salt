@@ -1,0 +1,10 @@
+CouchDB>=0.9
+Fabric>=1.6.1
+Hamlish-Jinja>=0.3.1
+Jinja2>=2.7
+MarkupSafe>=0.18
+argparse>=1.2.1
+paramiko>=1.10.1
+pycrypto>=2.6
+tornado>=3.1
+wsgiref>=0.1.2
