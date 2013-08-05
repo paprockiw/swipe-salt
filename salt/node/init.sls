@@ -7,3 +7,5 @@ npm-packages:
     - names:
       - coffee-script
       - uglify-js
+    - require:
+      - pkg: nodejs
