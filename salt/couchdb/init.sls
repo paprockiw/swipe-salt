@@ -1,6 +1,8 @@
 couchdb:
   pkg:
     - installed
+  service:
+    - running
 
 /etc/couchdb/local.ini:
   file:
