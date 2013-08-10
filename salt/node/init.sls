@@ -4,6 +4,7 @@ nodejs:
 
 npm-packages:
   npm.installed:
+    - dir: /home/bill/swipe-framework
     - names:
       - coffee-script
       - uglify-js
