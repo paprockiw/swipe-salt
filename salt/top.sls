@@ -1,6 +1,7 @@
 
 base:
   '*':
+    - swipe
     - git
     - python
     - couchdb

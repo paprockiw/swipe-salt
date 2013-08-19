@@ -3,4 +3,6 @@ ruby:
     - installed
 
 zurb-foundation:
-  gem.installed
+  gem.installed:
+    - require:
+      - pkg: ruby

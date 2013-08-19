@@ -12,10 +12,10 @@ python-virtualenv:
 
 {% set user = 'bill' %}
 
-/home/{{ user }}/swipe-framework:
-  file.directory:
-    - user: {{ user }}
-    - mode: 777
+#/home/{{ user }}/swipe-framework:
+#  file.directory:
+#    - user: {{ user }}
+#    - mode: 777
 
 /home/{{ user }}/swipe-framework/requirements.txt:
   file:
@@ -23,6 +23,8 @@ python-virtualenv:
     - user: {{ user }}
     - mode: 777
     - source: salt://python/requirements.txt
+    - require:
+      - file.directory: /home/{{ user }}/swipe-framework
 
 /home/{{ user }}/swipe-framework/env:
   virtualenv:
@@ -33,3 +35,4 @@ python-virtualenv:
     - requirements: salt://python/requirements.txt
     - require:
       - pkg: python-virtualenv
+      - file.directory: /home/{{ user }}/swipe-framework

@@ -1,9 +1,12 @@
 git:
   pkg.installed
 
+{% set user = 'bill' %}
+
 https://github.com/ruahman/swipe-framework.git:
   git.latest:
-    - target: /home/bill/swipe-framework/swipe
+    - target: /home/{{ user }}/swipe-framework
+    - force: True
     - require: 
-      - file: /home/bill/swipe-framework
+      - file: /home/{{ user }}/swipe-framework
       - pkg: git
