@@ -11,4 +11,5 @@ npm-packages:
       - uglify-js
     - require:
       - pkg: nodejs
-      - file.directory: /home/{{ user }}/swipe-framework
+      - git.repository: https://github.com/ruahman/swipe-framework.git
+      #- file.directory: /home/{{ user }}/swipe-framework
