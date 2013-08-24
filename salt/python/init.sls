@@ -11,12 +11,6 @@ python-virtualenv:
     - installed
 
 {% set user = 'bill' %}
-
-#/home/{{ user }}/swipe-framework:
-#  file.directory:
-#    - user: {{ user }}
-#    - mode: 777
-
 /home/{{ user }}/swipe-framework/requirements.txt:
   file:
     - managed
@@ -24,8 +18,8 @@ python-virtualenv:
     - mode: 777
     - source: salt://python/requirements.txt
     - require:
+      - pkg: git
       - git.repository: https://github.com/ruahman/swipe-framework.git
-      #- file.directory: /home/{{ user }}/swipe-framework
 
 /home/{{ user }}/swipe-framework/env:
   virtualenv:
@@ -36,5 +30,5 @@ python-virtualenv:
     - requirements: salt://python/requirements.txt
     - require:
       - pkg: python-virtualenv
+      - pkg: git
       - git.repository: https://github.com/ruahman/swipe-framework.git
-      #- file.directory: /home/{{ user }}/swipe-framework

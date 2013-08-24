@@ -12,4 +12,3 @@ npm-packages:
     - require:
       - pkg: nodejs
       - git.repository: https://github.com/ruahman/swipe-framework.git
-      #- file.directory: /home/{{ user }}/swipe-framework

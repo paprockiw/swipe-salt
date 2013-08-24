@@ -8,5 +8,4 @@ https://github.com/ruahman/swipe-framework.git:
     - target: /home/{{ user }}/swipe-framework
     - force: True
     - require: 
-      - file: /home/{{ user }}/swipe-framework
       - pkg: git
