@@ -1,8 +1,10 @@
 ruby:
-  pkg:
-    - installed
-
-zurb-foundation:
-  gem.installed:
+  rvm.installed:
+    - default: True
     - require:
-      - pkg: ruby
+      - git.repository: https://github.com/ruahman/swipe-framework.git
+
+gemset:
+  rvm.gemset_present:
+    - names:
+      - zurb-foundation

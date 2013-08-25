@@ -5,4 +5,4 @@ base:
     - python
     - couchdb
     - node
-    #    - ruby
+    - ruby
