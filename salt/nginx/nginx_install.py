@@ -1,3 +1,7 @@
+import os
+import sys
+from toolbox.comand_chain import *
+
 # fist get nginx files
 if cmd_exists("git"):
 
