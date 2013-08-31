@@ -6,3 +6,4 @@ base:
     - couchdb
     - node
     - ruby
+    - nginx
