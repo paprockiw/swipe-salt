@@ -1,0 +1,61 @@
+#!/bin/bash
+
+# project directory
+mkdir nginx
+cd nginx
+
+# get the nginx tarball, untar it
+curl -LO http://nginx.org/download/nginx-1.3.4.tar.gz
+tar xf nginx-1.3.4.tar.gz
+
+# move nginx to src
+mv nginx-1.3.4 src
+
+# clone nginx upload and debug projects from git
+git clone https://github.com/vkholodkov/nginx-upload-module.git
+git clone https://github.com/agentzh/echo-nginx-module.git
+
+# switch branch for upload module
+cd nginx-upload-module
+git branch 2.remotes/origin/2.2
+git checkout 2.2
+cd ../
+
+# move to source
+cd src/
+
+# define directory for config file
+DIR=$(pwd) # current directory
+PREFIX=$(dirname $DIR) # one up from current directory
+
+# compile nginx
+./configure --prefix=$PREFIX \
+--add-module=../nginx-upload-module \
+--add-module=../echo-nginx-module \
+--with-debug \
+--with-http_stub_status_module \
+--with-http_flv_module \
+--with-http_ssl_module \
+--with-http_dav_module \
+--with-http_gzip_static_module \
+--with-http_realip_module \
+--with-mail \
+--with-mail_ssl_module \
+--with-ipv6 \
+--with-pcre 
+
+# run makefile
+sudo make
+sudo make install
+
+# change permissions for nginx
+cd ../../
+sudo chmod -R 777 nginx
+
+# install nginx configuration
+mkdir -p nginx/conf
+cp nginx.conf nginx/conf/nginx.conf
+
+# make and set permissions for uploads dir
+mkdir -p nginx/uploads
+sudo chmod -R 777 nginx/uploads
