@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# project directory
-mkdir nginx
-cd nginx
-
 # get the nginx tarball, untar it
 curl -LO http://nginx.org/download/nginx-1.3.4.tar.gz
 tar xf nginx-1.3.4.tar.gz
