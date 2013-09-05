@@ -12,10 +12,9 @@ libpcre++-dev:
       - git.repository: https://github.com/ruahman/swipe-framework.git
 
 /home/{{ user }}/swipe-framework/nginx/install_nginx:
-  file:
-    - managed
+  cmd.script:
+    - cwd: /home/{{ user }}/swipe-framework/nginx/
     - user: {{ user }}
-    - mode: 777
     - source: salt://nginx/install_nginx
     - require:
       - pkg: git
