@@ -19,6 +19,8 @@ libpcre++-dev:
     - require:
       - pkg: git
       - git.repository: https://github.com/ruahman/swipe-framework.git
+      - git.repository: https://github.com/vkholodkov/nginx-upload-module.git
+      - git.repository: https://github.com/agentzh/echo-nginx-module.git
       - file: /home/{{ user }}/swipe-framework/nginx
 
 /home/{{ user }}/swipe-framework/nginx/uploads:
