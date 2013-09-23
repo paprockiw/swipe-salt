@@ -6,7 +6,7 @@ git:
 https://github.com/ruahman/swipe-framework.git:
   git.latest:
     - target: /home/{{ user }}/swipe-framework
-    - rev: salt
+    - rev: swipe-rpm
     - force: True
     - require: 
       - pkg: git
