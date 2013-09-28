@@ -2,6 +2,12 @@ nodejs:
   pkg:
     - installed
 
+npm:
+  pkg:
+    - installed
+    - require:
+      - pkg: nodejs
+
 {% set user = 'bill' %}
 npm-packages:
   npm.installed:
