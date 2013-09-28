@@ -7,13 +7,18 @@ npm:
     - installed
     - require:
       - pkg: nodejs
+      
+coffee-script:
+  npm:
+    - installed
+    - require:
+      - pkg: npm
 
 {% set user = 'bill' %}
 npm-packages:
   npm.installed:
     - dir: /home/{{ user }}/swipe-framework
     - names:
-      - coffee-script
       - uglify-js
     - require:
       - pkg: nodejs
