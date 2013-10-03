@@ -10,8 +10,8 @@ python-virtualenv:
   pkg:
     - installed
 
-{% set user = 'bill' %}
-/home/{{ user }}/swipe-framework/requirements.txt:
+{% set user = 'ruahman' %}
+/home/{{ user }}/swipe-rpm/requirements.txt:
   file:
     - managed
     - user: {{ user }}
@@ -21,11 +21,10 @@ python-virtualenv:
       - pkg: git
       - git.repository: https://github.com/ruahman/swipe-framework.git
 
-/home/{{ user }}/swipe-framework/env:
+/home/{{ user }}/swipe-rpm/env:
   virtualenv:
     - managed
     - no-site-packages: True
-#    - system_site_packages: False # New version
     - user: {{ user }}
     - requirements: salt://python/requirements.txt
     - require:
