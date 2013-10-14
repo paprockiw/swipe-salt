@@ -1,7 +1,7 @@
 libpcre++-dev:
   pkg:
     - installed
-{% set user = 'ruahman' %}
+{% set user = 'bill' %}
 
 /home/{{ user }}/swipe-rpm/nginx:
   file.directory:
