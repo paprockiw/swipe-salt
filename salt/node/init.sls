@@ -1,4 +1,4 @@
-{% set user = 'ruahman' %}
+{% set user = 'bill' %}
 
 /home/{{ user }}/node-latest.tar.gz:
   file.managed:
