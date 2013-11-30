@@ -1,9 +1,10 @@
 
 base:
   '*':
-    - git
-    - python
-    - couchdb
-    - node
-    - ruby
+#     - rvm
+#    - git
+#    - python
+#    - couchdb
+#    - node
+#    - ruby
     - nginx
