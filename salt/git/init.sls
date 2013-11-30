@@ -1,7 +1,7 @@
 git:
   pkg.installed
 
-{% set user = 'bill' %}
+{% set user = 'ubuntu' %}
 
 https://github.com/ruahman/swipe-framework.git:
   git.latest:

@@ -10,7 +10,7 @@ python-virtualenv:
   pkg:
     - installed
 
-{% set user = 'bill' %}
+{% set user = 'ubuntu' %}
 /home/{{ user }}/swipe-rpm/requirements.txt:
   file:
     - managed
