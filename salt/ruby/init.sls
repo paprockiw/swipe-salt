@@ -1,5 +1,6 @@
 ruby:
-  pkg.installed
+  pkg.installed:
+    - version: '>=2.0.0'
 
 rubygems:
   pkg.installed
