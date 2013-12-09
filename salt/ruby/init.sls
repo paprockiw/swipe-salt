@@ -19,7 +19,7 @@ compass:
       - pkg: ruby
       - gem: sass
       
-zurb-foundation:
+foundation:
   gem.installed:
     - require:
       - pkg: rubygems
